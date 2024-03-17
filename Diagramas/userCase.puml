@@ -6,12 +6,12 @@ usecase "Seleccionar un equipo" as seleccionarEquipo
 cliente-right-> seleccionarEquipo
 
 usecase "Seleccionar opcion envío" as sleccionarEnvio
-seleccionarEquipo -right-> sleccionarEnvio
+cliente -left-> sleccionarEnvio
 
 usecase "Registrarse" as registrarse
-sleccionarEnvio-down-> registrarse
+cliente-down-> registrarse
 
 usecase "Iniciar sesión" as iniciarSesion
-sleccionarEnvio -up-> iniciarSesion
+cliente -up-> iniciarSesion
 
 @enduml
