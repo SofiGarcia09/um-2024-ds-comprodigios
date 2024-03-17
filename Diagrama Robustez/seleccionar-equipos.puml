@@ -30,7 +30,7 @@ consolas -up-> validarSeleccionEquipos
 boundary "Mostrar error" as error 
 validarSeleccionEquipos -> error: No seleccionó ningún equipo
 
-control "Darle click al botón siguiente" as botonSiguiente
+control "Darle clic al botón siguiente" as botonSiguiente
 control "Guardar Equipos" as guardarDatosDeEquipos
 
 fePantallaEquipos -right-> botonSiguiente
