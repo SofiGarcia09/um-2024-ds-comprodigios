@@ -1,7 +1,7 @@
 @startuml
 
 actor Cliente as cliente
-boundary "FE Pantalla 'Seleccionar opcion envio'" as fePantallaOpcionEnvio
+boundary "FE Pantalla 'Seleccionar opción envío'" as fePantallaOpcionEnvio
 cliente -> fePantallaOpcionEnvio
 
 boundary "Elija una opción" as feElegirOpcion
@@ -31,16 +31,16 @@ obtenerSucursales -left-> entityPueblos
 boundary "FE Sucursal" as sucursal 
 obtenerSucursales -> sucursal
 
-control "Obtener metodos de pago" as metodoPago
+control "Obtener métodos de pago" as metodoPago
 fePantallaOpcionEnvio -up-> metodoPago
 entity metodosDePago as entityMetodosPago
 metodoPago -left-> entityMetodosPago
-boundary "FE Metodo de pago" as feMetodoPado
+boundary "FE Método de pago" as feMetodoPado
 metodoPago -right-> feMetodoPado
 
 control "Darle clic al botón siguiente" as botonSiguiente
 fePantallaOpcionEnvio -> botonSiguiente
-control "Guardar opcion envio" as guardarOpcionEnvio
+control "Guardar opción envío" as guardarOpcionEnvio
 botonSiguiente -> guardarOpcionEnvio
 entity seleccionar_opcion_envio as seleccionOpcion
 guardarOpcionEnvio -> seleccionOpcion
