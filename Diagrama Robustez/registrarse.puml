@@ -25,7 +25,7 @@ validarDatos -left-> error: Los datos no son validos
 boundary "Mostrar error" as mostrarError
 validarDatos -> mostrarError: La cuenta ya existe 
 
-control "Dar clic en botón crear cuenta" as crearCuenta
+control "Dar clic en botón rear cuenta" as crearCuenta
 feRegistrarse -> crearCuenta
 
 control "Guardar datos registrarse" as datosRegistrarse
@@ -35,8 +35,6 @@ datosRegistrarse -> registro
 usecase "Iniciar sesión" as iniciarSesion
 datosRegistrarse -down-> iniciarSesion
 
-boundary "Tiene cuenta" as tieneCuenta
-feRegistrarse-down->tieneCuenta: Ya tiene una cuenta?
-tieneCuenta -> iniciarSesion
+feRegistrarse-down->iniciarSesion: ¿Ya tiene una cuenta?
 
 @enduml
